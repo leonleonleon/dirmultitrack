@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Zoom R16 Tool</title>
+    <title>DIR Multitrack</title>
     <link rel="stylesheet" href="./node_modules/trackswitch/css/trackswitch.css">
     <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css">
     <style>
@@ -35,7 +35,7 @@
         display: flex;
         justify-content: flex-end;
       }
-      header .files button {
+      header button {
         flex-grow: 0;
         /* height: 1.5rem; */
         font-size: 1rem;
@@ -48,6 +48,24 @@
         color: #333;
         font-size: 1rem;
         margin-right: 1rem;
+      }
+      .buttonwrapper {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+      }
+      .buttonwrapper button {
+        height: 1.5rem;
+        align-self: center;
+        border-radius: .2rem;
+        line-height: 1rem;
+        opacity: 0.5;
+      }
+      .buttonwrapper button:hover {
+        opacity: 1;
+      }
+      .project {
+        margin-bottom: 3rem;
       }
     </style>
   </head>
