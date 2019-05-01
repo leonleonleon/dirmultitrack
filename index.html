@@ -12,15 +12,55 @@
         color: #fefefe;
         padding: 1rem;
         margin: 0;
+        font-size: 1rem;
+        line-height: 1.5rem;
       }
       #target {
         margin: 1rem 0;
       }
+
+      .player {
+        margin: 0;
+        width: 100%;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      header h1 {
+        margin: 0;
+      }
+      header .files {
+        display: flex;
+        justify-content: flex-end;
+      }
+      header .files button {
+        flex-grow: 0;
+        /* height: 1.5rem; */
+        font-size: 1rem;
+        line-height: 1rem;
+        padding: .25rem;
+      }
+      #currentDir {
+        padding: .25rem;
+        background-color: #666;
+        color: #333;
+        font-size: 1rem;
+        margin-right: 1rem;
+      }
     </style>
   </head>
   <body>
-    <h1>CF Multitrack</h1>
-    <input id="dir" type="file" webkitdirectory/>
+    <header>
+      <h1>DIR Multitrack</h1>
+      <div class="files">
+        <div id="currentDir"></div>
+        <input id="dir" type="file" style="display: none;" webkitdirectory/>
+        <button id="selectBtn">SELECT</button>
+      </div>
+    </header>
+
     <!-- All of the Node.js APIs are available in this renderer process. -->
     <!-- We are using Node.js <script>document.write(process.versions.node)</script>, -->
     <!-- Chromium <script>document.write(process.versions.chrome)</script>, -->
