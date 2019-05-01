@@ -1,18 +1,18 @@
 {
-  "name": "electron-quick-start",
-  "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "name": "dirmultitrack",
+  "version": "0.0.1",
+  "description": "A minimal App to play Multitracks from Directories",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/leonleonleon/dirmultitrack",
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "App",
+    "Sound",
+    "Multitrack",
+    "Noe"
   ],
   "author": "GitHub",
   "license": "CC0-1.0",
