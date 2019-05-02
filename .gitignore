@@ -1,3 +1,4 @@
 node_modules
-/build/*.zip
-/build/*.*.zip
+build/*.zip
+build/*.*.zip
+build/DIR-Multitrack.app.zip
