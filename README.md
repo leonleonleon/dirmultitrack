@@ -1,5 +1,5 @@
 # dirmultitrack
-Small App to read CF Multitrack Cards comping from Zoom R16
+Small App to read Flashcards or Folders coming from the ZoomR16 or the Ehx95000
 
 run this to start
 `npm i; npm start;`
