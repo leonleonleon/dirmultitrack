@@ -50,23 +50,19 @@ function checkForR16( path, rootDir ) {
 
     if ( fs.existsSync( projectFile ) && path ) {
 
-
-        // console.log( path );
-
-        // fs.readFile( projectFile, 'utf8', function( err, contents ) {
-        //     console.log( 'prj: ', contents );
-
-        // } );
-
-        // fs.readFile( fxFile, 'utf8', function( err, contents ) {
-        //     console.log( 'fx: ', contents );
-        // });
-
-        // first = false;
-
-        createPlayer( path, rootDir, 'AUDIO', 'Zoom R16' );
+        const projectInfo = getZoomR16ProjectInfo( projectFile );
+        console.log( projectInfo );
+        createPlayer( path, rootDir, 'AUDIO', 'Zoom R16 | ' + projectInfo );
 
     }
+}
+
+function getZoomR16ProjectInfo( projectFile ) {
+
+    const infoRaw = fs.readFileSync( projectFile, 'utf-8' );
+    // const info = infoRaw.match(/Tempo=( |\d+)(\d+)(.)(\d+)( )bpm/)[0].replace('Tempo=', '');
+
+    return infoRaw.split(' ')[ 21 ].split('�')[0];
 }
 
 function checkFor95000( path, rootDir ) {
@@ -74,7 +70,7 @@ function checkFor95000( path, rootDir ) {
 
     if ( fs.existsSync( projectFile ) && path ) {
         const info = get9500ProjectInfo( projectFile );
-        createPlayer( path, rootDir, '', 'Ehx95000 ' + info );
+        createPlayer( path, rootDir, '', 'Ehx95000 | ' + info );
     }
 }
 
@@ -133,7 +129,7 @@ function createPlayer( path, rootDir, audiopath, projectInfo ) {
         }
 
         jQuery(document).ready(function() {
-            jQuery(".player").trackSwitch(); // All other players are default
+            jQuery(".player").trackSwitch( { repeat : true } ); // All other players are default
             jQuery('.opendir').click('click', ( e ) => {
                 openFolder( jQuery(e.target).data('dir') );
             })
