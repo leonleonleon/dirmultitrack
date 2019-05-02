@@ -1,0 +1,27 @@
+{
+  "name": "dirmultitrack",
+  "version": "0.0.1",
+  "description": "A minimal App to play Multitracks from Directories",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/leonleonleon/dirmultitrack",
+  "keywords": [
+    "Electron",
+    "App",
+    "Sound",
+    "Multitrack",
+    "Noe"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^5.0.0"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.4.0",
+    "trackswitch": "^0.1.0"
+  }
+}
